@@ -6,7 +6,7 @@
     
     <lastmod>2025-01-27</lastmod>
     
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
@@ -15,7 +15,7 @@
     
     <lastmod>2025-01-21</lastmod>
     
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
@@ -24,7 +24,7 @@
     
     <lastmod>2024-12-28</lastmod>
     
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
@@ -33,7 +33,7 @@
     
     <lastmod>2024-12-28</lastmod>
     
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
@@ -42,14 +42,14 @@
     
     <lastmod>2024-12-19</lastmod>
     
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
 
   <url>
     <loc>https://tangturtle.github.io/</loc>
-    <lastmod>2025-04-16</lastmod>
+    <lastmod>2025-07-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

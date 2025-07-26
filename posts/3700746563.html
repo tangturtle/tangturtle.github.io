@@ -276,7 +276,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          663 字
+          650 字
         
       </span>
     
@@ -338,7 +338,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Hexo-的图片上传与本地预览"><a href="#Hexo-的图片上传与本地预览" class="headerlink" title=" Hexo 的图片上传与本地预览"></a><center> Hexo 的图片上传与本地预览</h1><h5 id="本地预览基于vscode的typora插件"><a href="#本地预览基于vscode的typora插件" class="headerlink" title=" 本地预览基于vscode的typora插件"></a><center> 本地预览基于vscode的typora插件</h5><h3 id="方案一-不推荐"><a href="#方案一-不推荐" class="headerlink" title="方案一 (不推荐)"></a>方案一 (不推荐)</h3><h4 id="全局资源文件夹"><a href="#全局资源文件夹" class="headerlink" title="全局资源文件夹"></a>全局资源文件夹</h4><p>即，将所有文章的资源统一用一个全局资源文件夹管理。</p>
+                <h2 id="Hexo-的图片上传与本地预览"><a href="#Hexo-的图片上传与本地预览" class="headerlink" title=" Hexo 的图片上传与本地预览"></a><center> Hexo 的图片上传与本地预览</h2><h5 id="本地预览基于vscode的typora插件"><a href="#本地预览基于vscode的typora插件" class="headerlink" title=" 本地预览基于vscode的typora插件"></a><center> 本地预览基于vscode的typora插件</h5><h3 id="方案一-不推荐"><a href="#方案一-不推荐" class="headerlink" title="方案一 (不推荐)"></a>方案一 (不推荐)</h3><h4 id="全局资源文件夹"><a href="#全局资源文件夹" class="headerlink" title="全局资源文件夹"></a>全局资源文件夹</h4><p>即，将所有文章的资源统一用一个全局资源文件夹管理。</p>
 <p>此方法的优点是比较简便，并且当多篇文章需要引用同一资源时，也比较方便。缺点是当文章很多时，各个文章的图片都在同一文件夹，不便管理。</p>
 <h4 id="具体方法："><a href="#具体方法：" class="headerlink" title="具体方法："></a>具体方法：</h4><p>在 hexo 文件夹下的 source 目录下，新建一个文件夹叫 images(名字随意)，将要插入的图片放在该文件夹中。</p>
 <p>在 md 文档内，使用 <code>![图片](图片链接地址 &quot;图片title&quot;)</code>的格式，圆括号内的链接地址写(&#x2F;images&#x2F;name.jpeg)。</p>
@@ -362,9 +362,6 @@
 <figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs gherkin">--|<span class="hljs-string"></span><br><span class="hljs-string">  </span>|<span class="hljs-string">---filename-</span>|<span class="hljs-string">---time.jpg</span><br><span class="hljs-string">  </span>|<span class="hljs-string">            </span>|<span class="hljs-string">---time1.jpg</span><br><span class="hljs-string">  </span>|<br>  |<span class="hljs-string">---filename.md</span><br></code></pre></td></tr></table></figure>
 <p>所以对 <code>\node_modules\hexo-renderer-marked\lib\renderer.js</code> 进行修改</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//约第118行</span><br><br><span class="hljs-comment">// Prepend root to image path</span><br><span class="hljs-title function_">image</span>(<span class="hljs-params">href, title, text</span>) &#123;<br>    <span class="hljs-comment">// 从这里添加3行</span><br>    <span class="hljs-keyword">if</span> (href.<span class="hljs-title function_">indexOf</span>(<span class="hljs-string">&quot;\\&quot;</span>) &gt; -<span class="hljs-number">1</span>) &#123;<br>        href = href.<span class="hljs-title function_">split</span>(<span class="hljs-string">&quot;\\&quot;</span>)[<span class="hljs-number">1</span>];<br>    &#125;<br><br>    <span class="hljs-comment">//...</span><br>    <span class="hljs-comment">//文件其他内容</span><br>    <span class="hljs-comment">//...</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>搞定，现在可以快乐的写博客了</p>
-
                 
               </div>
             
