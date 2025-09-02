@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: https://tangturtle.github.io/tags
+Disallow: https://tangturtle.github.io/tags/*
+Disallow: https://tangturtle.github.io/categories/
+Disallow: https://tangturtle.github.io/categories/*
+Sitemap: https://tangturtle.github.io/sitemap.xml
